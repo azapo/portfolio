@@ -1,6 +1,6 @@
 const logotext = "Aram";
 const meta = {
-    title: "John Doe",
+    title: "Aram Zaprosyan",
     description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
 };
 
@@ -146,11 +146,9 @@ const contactConfig = {
     YOUR_USER_ID: "user_id",
 };
 
-const socialprofils = {
-    // github: "https://github.com",
-    // facebook: "https://facebook.com",
-    linkedin: "https://www.linkedin.com/in/aram-zaprosyan/",
-    // twitter: "https://twitter.com",
+const SOCIAL_PROFILES = {
+    linkedIn: "https://www.linkedin.com/in/aram-zaprosyan/",
+    googleScholar: "https://scholar.google.com/citations?user=1gAuwGgAAAAJ&hl=en&oi=ao"
 };
 export {
     meta,
@@ -161,6 +159,6 @@ export {
     services,
     introdata,
     contactConfig,
-    socialprofils,
+    SOCIAL_PROFILES,
     logotext,
 };

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { logotext ,socialprofils } from "../content_option";
+import { logotext, SOCIAL_PROFILES } from "../content_option";
 import Themetoggle from "../components/themetoggle";
 
 const Headermain = () => {
@@ -52,11 +52,12 @@ const Headermain = () => {
           </div>
           <div className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
             <div className="d-flex">
-            <a href={socialprofils.facebook}>Facebook</a>
-            <a href={socialprofils.github}>Github</a>
-            <a href={socialprofils.twitter}>Twitter</a>
+
+            {Object.entries(SOCIAL_PROFILES).map(([platform, url]) => 
+              <a href={url}>{platform}</a>
+            )}
+
             </div>
-            <p className="copyright m-0">copyright __ {logotext}</p>
           </div>
         </div>
       </header>

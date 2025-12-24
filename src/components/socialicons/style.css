@@ -14,8 +14,13 @@
 }
 
 .stick_follow_icon svg {
-    width: 1.3em;
-    height: 1.3em;
+    width: 2em;
+    height: 2em;
+    fill: var(--text-color)
+}
+
+.stick_follow_icon .ai {
+    font-size: 2em;
     fill: var(--text-color)
 }
 
@@ -34,7 +39,9 @@
 }
 
 .stick_follow_icon ul li {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 12px;
     text-align: center;
     margin-bottom: 10px;
@@ -76,11 +83,12 @@
         margin-right: 65px;
     }
     .stick_follow_icon ul {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .stick_follow_icon ul li {
-        display: inline;
-        margin-bottom: 29px;
         margin-right: 10px;
     }
 }
