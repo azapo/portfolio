@@ -4,38 +4,13 @@
     width: 20px;
     height: 200px;
     position: fixed;
-    margin-top: -100px;
+    margin-top: -200px;
 }
 
 .stick_follow_icon ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.stick_follow_icon svg {
-    width: 2em;
-    height: 2em;
-    fill: var(--text-color)
-}
-
-.stick_follow_icon .ai {
-    font-size: 2em;
-    fill: var(--text-color)
-}
-
-.stick_follow_icon p {
-    top: 70px;
-    left: -24px;
-    width: 68px;
-    height: 20px;
-    color: var(--text-color);
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.2;
-    white-space: nowrap;
-    position: relative;
-    transform: rotate( -90deg);
 }
 
 .stick_follow_icon ul li {
@@ -48,10 +23,35 @@
     transition: all .3s;
 }
 
+.stick_follow_icon svg {
+    width: 3em;
+    height: 3em;
+    fill: var(--text-color)
+}
+
+.stick_follow_icon .ai {
+    font-size: 3em;
+    fill: var(--text-color)
+}
+
+.stick_follow_icon p {
+    top: 200px;
+    left: -24px;
+    width: 68px;
+    height: 20px;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    position: relative;
+    transform: rotate( -90deg);
+}
+
 .stick_follow_icon p:after {
     top: 9px;
-    right: -48px;
-    width: 40px;
+    right: -165px;
+    width: 120px;
     height: 1px;
     content: "";
     display: block;
@@ -71,6 +71,7 @@
         padding: 40px 0;
         align-items: center;
     }
+
     .stick_follow_icon p {
         top: unset;
         left: unset;
@@ -82,13 +83,30 @@
         font-size: 17px;
         margin-right: 65px;
     }
+
     .stick_follow_icon ul {
         margin-bottom: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .stick_follow_icon ul li {
         margin-right: 10px;
+    }
+
+    .stick_follow_icon svg {
+        margin-bottom: 2px;
+    }
+
+    .stick_follow_icon p:after {
+        top: 9px;
+        right: -48px;
+        width: 40px;
+        height: 1px;
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: var(--text-color);
     }
 }

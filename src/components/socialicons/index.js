@@ -12,9 +12,9 @@ const GoogleScholarIcon = () => (
 
 const ICON_MAPPING = {
   default: FaCircle,
-  gitHub: FaGithub,
-  linkedIn: FaLinkedin,
-  googleScholar: GoogleScholarIcon
+  GitHub: FaGithub,
+  LinkedIn: FaLinkedin,
+  GoogleScholar: GoogleScholarIcon
 };
 
 export const Socialicons = (params) => {
