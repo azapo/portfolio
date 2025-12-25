@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { logotext, SOCIAL_PROFILES } from "../content_option";
+import { LOGOTEXT, SOCIAL_PROFILES } from "../constants";
 import Themetoggle from "../components/themetoggle";
+import logo from "../assets/images/logo.png"
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
@@ -18,7 +19,7 @@ const Headermain = () => {
       <header className="fixed-top site__header">
         <div className="d-flex align-items-center justify-content-between">
           <Link  className="navbar-brand nav_ac" to="/">
-            {logotext}
+            <img src={logo} style={{width: "2em", height: "auto"}} />
           </Link>
           <div className="d-flex align-items-center">
           <Themetoggle />
@@ -54,7 +55,7 @@ const Headermain = () => {
             <div className="d-flex">
 
             {Object.entries(SOCIAL_PROFILES).map(([platform, url]) => 
-              <a href={url}>{platform}</a>
+              <a href={url} key={platform} target="_blank" rel="noopener noreferrer">{platform}</a>
             )}
 
             </div>

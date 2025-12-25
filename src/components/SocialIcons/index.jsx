@@ -4,7 +4,7 @@ import {
   FaLinkedin,
   FaCircle
 } from "react-icons/fa";
-import { SOCIAL_PROFILES } from "../../content_option";
+import { SOCIAL_PROFILES } from "../../constants";
 
 const GoogleScholarIcon = () => (
   <i className="ai ai-google-scholar-square"></i>
@@ -14,10 +14,10 @@ const ICON_MAPPING = {
   default: FaCircle,
   GitHub: FaGithub,
   LinkedIn: FaLinkedin,
-  GoogleScholar: GoogleScholarIcon
+  "Google Scholar": GoogleScholarIcon
 };
 
-export const Socialicons = (params) => {
+export const SocialIcons = (params) => {
   return (
     <div className="stick_follow_icon">
       <ul>
@@ -25,7 +25,7 @@ export const Socialicons = (params) => {
           const IconComponent = ICON_MAPPING[platform] || ICON_MAPPING.default;
           return (
             <li key={platform}>
-              <a href={url}>
+              <a href={url} target="_blank" rel="noopener noreferrer">
                 <IconComponent />
               </a>
             </li>

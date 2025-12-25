@@ -1,14 +1,13 @@
-import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   dataabout,
-  meta,
+  META,
   worktimeline,
   skills,
   services,
-} from "../../content_option";
+} from "../../constants";
 
 export const About = () => {
   return (
@@ -16,8 +15,8 @@ export const About = () => {
       <Container className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> About | {meta.title}</title>
-          <meta name="description" content={meta.description} />
+          <title> About | {META.title}</title>
+          <meta name="description" content={META.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">

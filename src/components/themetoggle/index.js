@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { WiMoonAltWaningCrescent4 } from "react-icons/wi";
 
-
 const Themetoggle = () => {
   const [theme, settheme] = useState(localStorage.getItem("theme"));
   const themetoggle = () => {

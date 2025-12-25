@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
+import { CONTACT_INFO, META } from "../../constants";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
 
-export const ContactUs = () => {
+export const Contact = () => {
   const [formData, setFormdata] = useState({
     email: "",
     name: "",
@@ -22,31 +21,28 @@ export const ContactUs = () => {
     setFormdata({ loading: true });
 
     const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
+      email: formData.email,
+      name: formData.name,
       message: formData.message,
     };
 
     emailjs
       .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
+        CONTACT_INFO.serviceId,
+        CONTACT_INFO.templateId,
         templateParams,
-        contactConfig.YOUR_USER_ID
+        CONTACT_INFO.publicKey
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           setFormdata({
             loading: false,
-            alertmessage: "SUCCESS! ,Thank you for your messege",
+            alertmessage: "Success! You should receive a confirmation email soon.",
             variant: "success",
             show: true,
           });
         },
         (error) => {
-          console.log(error.text);
           setFormdata({
             alertmessage: `Failed to send! ${error.text}`,
             variant: "danger",
@@ -58,9 +54,11 @@ export const ContactUs = () => {
   };
 
   const handleChange = (e) => {
-    setFormdata({
+    setFormdata(formData => {
+      return {
       ...formData,
       [e.target.name]: e.target.value,
+      }
     });
   };
 
@@ -69,8 +67,8 @@ export const ContactUs = () => {
       <Container>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
-          <meta name="description" content={meta.description} />
+          <title>{META.title} | Contact</title>
+          <meta name="description" content={META.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
@@ -93,23 +91,16 @@ export const ContactUs = () => {
             </Alert>
           </Col>
           <Col lg="5" className="mb-5">
-            <h3 className="color_sec py-4">Get in touch</h3>
+            <h3 className="color_sec py-4">Let's connect</h3>
             <address>
-              <strong>Email:</strong>{" "}
-              <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
-                {contactConfig.YOUR_EMAIL}
+              <strong>My Email:</strong>{" "}
+              <a href={`mailto:${CONTACT_INFO.email}`}>
+                aram(dot)zaprosyan(at)gmail(dot)com
               </a>
               <br />
               <br />
-              {contactConfig.hasOwnProperty("YOUR_FONE") ? (
-                <p>
-                  <strong>Phone:</strong> {contactConfig.YOUR_FONE}
-                </p>
-              ) : (
-                ""
-              )}
             </address>
-            <p>{contactConfig.description}</p>
+            <p>{CONTACT_INFO.description}</p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <form onSubmit={handleSubmit} className="contact__form w-100">
@@ -145,7 +136,7 @@ export const ContactUs = () => {
                 name="message"
                 placeholder="Message"
                 rows="5"
-                value={formData.message}
+                value={formData.message || ""}
                 onChange={handleChange}
                 required
               ></textarea>
