@@ -32,4 +32,6 @@ jobs:
         run: yarn build
 
       - name: Deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn deploy
