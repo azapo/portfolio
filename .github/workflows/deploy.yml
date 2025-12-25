@@ -15,7 +15,11 @@ jobs:
         with:
           node-version: 18
 
-      - run: yarn install
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn install
 
       - name: Build
         env:
