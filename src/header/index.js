@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { LOGOTEXT, SOCIAL_PROFILES } from "../constants";
+import { SOCIAL_PROFILES } from "../constants";
 import Themetoggle from "../components/themetoggle";
 import logo from "../assets/images/logo.png"
 
