@@ -68,14 +68,47 @@ const SKILLS = [
     "Racket/OCaml",
     "C",
     "HTML/CSS",
+    "MATLAB",
+    "R",
     "MaterialUI",
     "Git/GitHub/GitLab",
     "Visual Studio Code / PyCharm / Eclipse / Vim"
 ];
 
 const RELEVANT_COURSEWORK = [
+    "Advanced Data Structures (CMSC420)",
+    "Honors Algorithms (CMSC351H)",
+    "Database Design (CMSC424)",
+    "Web Application Development with JavaScript (CMSC335)",
+    "Building Secure Web Applications (CMSC388J)",
+    "Computer and Network Security (CMSC414)",
     "Introduction to Compilers (CMSC430)",
-    "Bioinformatic Algorithms, Databases, and Tools (CMSC423)"
+    "Organization of Programming Languages (CMSC330)",
+    "Programming Handheld Systems (CMSC436)",
+    "Introduction to Data Science (CMSC320)",
+    "Introduction to Computer Systems (CMSC216)",
+    "Object-Oriented Programming I (CMSC131)",
+    "Object-Oriented Programming II (CMSC132)",
+    "Penetration Testing (HACS408T)",
+    "Introduction to Reverse Engineering (HACS408E)",
+    "Foundations in Cybersecurity (HACS100)",
+    "Applied Cybersecurity Foundations I (HACS101)",
+    "Applied Cybersecurity Foundations II (HACS200)",
+    "Digital Forensics (HACS208N)",
+    "Python Programming for Data Science (DATA120)",
+    "Discrete Structures (CMSC250)",
+    "Bioinformatic Algorithms, Databases, and Tools (CMSC423)",
+    "Applications of R for Data Science (DATA110)",
+    "Introduction to Matlab (MATH206)",
+    "Databases for All (INST123)",
+    "Internet of Things Security (HACS408O)",
+    "Cybersecurity Group Problem Solving (HACS498)",
+    "Accounting and Economic Aspects of Cybersecurity (HACS208A)",
+    "Beyond Technology, the Policy Implications of Cyberspace (HACS208P)",
+    "Cybersecurity Professionals Colloquium Series; Current Issues (HACS318A)",
+    "Linear Algebra for Scientists and Engineers (MATH461)",
+    "Applied Probability and Statistics (STAT400)",
+    "Honors Calculus III (MATH241H)"
 ];
 
 // const services = [{
