@@ -1,8 +1,8 @@
-import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
-import { dataportfolio, META } from "../../constants";
+import { META, PORTFOLIO_DATA } from "../../constants";
+import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
   return (
@@ -20,13 +20,13 @@ export const Portfolio = () => {
           </Col>
         </Row>
         <div className="mb-5 po_items_ho">
-          {dataportfolio.map((data, i) => {
+          {PORTFOLIO_DATA.map((data, i) => {
             return (
               <div key={i} className="po_item">
                 <img src={data.img} alt="" />
                 <div className="content">
                   <p>{data.description}</p>
-                  <a href={data.link}>view project</a>
+                  <Link to={data.link}>view project</Link>
                 </div>
               </div>
             );

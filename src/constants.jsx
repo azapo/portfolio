@@ -125,10 +125,10 @@ const RELEVANT_COURSEWORK = [
 //     },
 // ];
 
-const dataportfolio = [{
+const PORTFOLIO_DATA = [{
         img: "https://picsum.photos/400/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        link: "/p1",
     },
     {
         img: "https://picsum.photos/400/800/?grayscale",
@@ -204,7 +204,7 @@ const SOCIAL_PROFILES = {
 export {
     META,
     ABOUT_ME_BLURB,
-    dataportfolio,
+    PORTFOLIO_DATA,
     WORK_HISTORY,
     SKILLS,
     RELEVANT_COURSEWORK,
