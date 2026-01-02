@@ -1,11 +1,11 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Home } from "../pages/home";
 import { Portfolio } from "../pages/portfolio";
 import { Contact } from "../pages/contact";
 import { About } from "../pages/about";
 import { Project } from "../pages/project";
 import { SocialIcons } from "../components/SocialIcons";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -13,7 +13,7 @@ function AnimatedRoutes() {
   return (
     <TransitionGroup>
       <CSSTransition
-        key={location.key}
+        key={location.pathname}
         timeout={{
           enter: 400,
           exit: 400,
@@ -24,9 +24,10 @@ function AnimatedRoutes() {
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio" element={<Portfolio />}>
+            <Route path="p1" element={<Project />} />
+          </Route>
           <Route path="/contact" element={<Contact />} />
-          <Route path="/p1" element={<Project />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </CSSTransition>
@@ -34,7 +35,7 @@ function AnimatedRoutes() {
   );
 }
 
-function AppRoutes() {
+export default function AppRoutes() {
   return (
     <div className="s_c">
       <AnimatedRoutes />
@@ -42,5 +43,3 @@ function AppRoutes() {
     </div>
   );
 }
-
-export default AppRoutes;

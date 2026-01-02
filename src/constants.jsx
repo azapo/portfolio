@@ -128,7 +128,7 @@ const RELEVANT_COURSEWORK = [
 const PORTFOLIO_DATA = [{
         img: "https://picsum.photos/400/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "/p1",
+        link: "/portfolio/p1",
     },
     {
         img: "https://picsum.photos/400/800/?grayscale",
