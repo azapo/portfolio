@@ -1,9 +1,8 @@
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
 import { META } from "../../constants";
-import { capitalizeFirstLetterOfWords, changeStringSeparator } from "../../utils";
+import { capitalizeFirstLetterOfWords } from "../../utils";
 import headshot from "../../assets/images/headshot.jpg"
 
 const Project = ({object}) => {
