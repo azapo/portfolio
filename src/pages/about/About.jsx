@@ -9,13 +9,13 @@ import {
   RELEVANT_COURSEWORK
 } from "../../constants";
 
-const Project = () => {
+const About = () => {
   return (
     <HelmetProvider>
       <Container className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> About | {META.title}</title>
+          <title>About Me | {META.title}</title>
           <meta name="description" content={META.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
@@ -114,4 +114,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default About;

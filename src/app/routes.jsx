@@ -1,11 +1,13 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Home } from "../pages/home";
-import { Portfolio } from "../pages/portfolio";
+import { Projects } from "../pages/projects";
 import { Contact } from "../pages/contact";
 import { About } from "../pages/about";
-import { Project } from "../pages/project";
+import { Project } from "../components/Project";
 import { SocialIcons } from "../components/SocialIcons";
+import { PROJECTS } from "../constants";
+import { changeStringSeparator } from "../utils";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -24,11 +26,12 @@ function AnimatedRoutes() {
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />}>
-            <Route path="p1" element={<Project />} />
-          </Route>
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
+          {Object.keys(PROJECTS).map(key => {
+            return <Route key={key} element={<Project />} path={`/projects/${changeStringSeparator(key, " ", "_")}`} />
+          })}
         </Routes>
       </CSSTransition>
     </TransitionGroup>

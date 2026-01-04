@@ -1,18 +1,18 @@
 const META = {
     title: "Aram Zaprosyan",
-    description: "Aram Zaprosyan",
+    description: "Aram Zaprosyan Portfolio",
 };
 
 const INTRO_DATA = {
     title: "Hi! I’m Aram Zaprosyan",
     statements: [
-        "I love coding",
+        "I love programming",
         "I'm a puzzle enthusiast",
         "I write mysteries",
         "I play soccer",
     ],
     description: `I'm a jack of all trades, master of some. 
-        When I'm not coding, you'll probably catch me playing soccer,
+        When I'm not programming, you'll probably catch me playing soccer,
         writing detective fiction stories, or catching rays at the beach.
         You're welcome to explore my portfolio and get in touch with me!`
 };
@@ -21,10 +21,11 @@ const ABOUT_ME_BLURB = {
     aboutMe: `I graduate in May of 2026 from the University of Maryland, College Park
         with a Bachelor of Science (B.S.) in Computer Science, a minor in Cybersecurity
         through the Advanced Cybersecurity Experience for Students (ACES) Honors Program, and
-        a minor in Data Science. I've worked as a software engineer, computer science researcher,
+        a minor in Data Science (and a 4.0 GPA). I've worked as a software engineer, computer science researcher,
         and teaching assistant. I'm very passionate about full stack software engineering work and 
         always open to chat!`,
 };
+
 const WORK_HISTORY = [{
         job: "Software Engineer (Part-Time)",
         company: "Ncyber",
@@ -125,68 +126,38 @@ const RELEVANT_COURSEWORK = [
 //     },
 // ];
 
-const PORTFOLIO_DATA = [{
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "/portfolio/p1",
-    },
-    {
-        img: "https://picsum.photos/400/800/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-
-    {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/550/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-];
+const PROJECTS = {
+    "portfolio":
+        {
+            description: "This portfolio!",
+        },
+    "quadtree research":
+        {
+            description: "Published Quadtree Research",
+            links: [
+                "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SoCG.2025.83",
+            ]
+        },
+    "compiler":
+        {
+            description: "Racket Compiler",
+        },
+    "bookmark":
+        {
+            description: "Bookmark Chrome Extension",
+        },
+    
+    // {
+    //     img: "https://picsum.photos/400/600/?grayscale",
+    //     description: "The wisdom of life consists in the elimination of non-essentials.",
+    //     link: "#",
+    // },
+    // {
+    //     img: "https://picsum.photos/400/300/?grayscale",
+    //     description: "The wisdom of life consists in the elimination of non-essentials.",
+    //     link: "#",
+    // },
+};
 
 const CONTACT_INFO = {
     email: "aram.zaprosyan@gmail.com",
@@ -204,7 +175,7 @@ const SOCIAL_PROFILES = {
 export {
     META,
     ABOUT_ME_BLURB,
-    PORTFOLIO_DATA,
+    PROJECTS,
     WORK_HISTORY,
     SKILLS,
     RELEVANT_COURSEWORK,

@@ -1,32 +1,34 @@
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
-import { META, PORTFOLIO_DATA } from "../../constants";
+import { META, PROJECTS } from "../../constants";
 import { Link } from "react-router-dom";
+import { changeStringSeparator } from "../../utils";
 
-export const Portfolio = () => {
+const Projects = () => {
   return (
     <HelmetProvider>
       <Container className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> Portfolio | {META.title} </title>{" "}
+          <title>My Projects | {META.title} </title>{" "}
           <meta name="description" content={META.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
-            <h1 className="display-4 mb-4"> Portfolio </h1>{" "}
+            <h1 className="display-4 mb-4">My Projects</h1>{" "}
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
         <div className="mb-5 po_items_ho">
-          {PORTFOLIO_DATA.map((data, i) => {
+          {Object.entries(PROJECTS).map(([key, value]) => {
+
             return (
-              <div key={i} className="po_item">
-                <img src={data.img} alt="" />
+              <div key={key} className="po_item">
+                <img src={require(`../../assets/images/proj_${changeStringSeparator(key, " ", "_")}/cover.png`)} alt="" />
                 <div className="content">
-                  <p>{data.description}</p>
-                  <Link to={data.link}>view project</Link>
+                  <p>{value.description}</p>
+                  <Link to={`/projects/${changeStringSeparator(key, " ", "_")}`}>view project</Link>
                 </div>
               </div>
             );
@@ -36,3 +38,5 @@ export const Portfolio = () => {
     </HelmetProvider>
   );
 };
+
+export default Projects;

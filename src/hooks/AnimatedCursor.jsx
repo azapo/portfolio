@@ -1,4 +1,4 @@
-import React, {useEffect,useRef,useState,useCallback} from "react"
+import { useEffect, useRef, useState, useCallback } from "react"
 
 const IsDevice = (() => {
     if (typeof navigator == 'undefined') return
@@ -283,10 +283,10 @@ function CursorCore({
     document.body.style.cursor = 'none'
   
     return (
-      <React.Fragment>
+      <>
         <div ref={cursorOuterRef} style={styles.cursorOuter} />
         <div ref={cursorInnerRef} style={styles.cursorInner} />
-      </React.Fragment>
+      </>
     )
   }
   
@@ -307,7 +307,7 @@ function CursorCore({
     clickables
   }) {
     if (typeof navigator !== 'undefined' && IsDevice.any()) {
-      return <React.Fragment></React.Fragment>
+      return <></>
     }
     return (
       <CursorCore

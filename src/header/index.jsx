@@ -3,7 +3,7 @@ import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { SOCIAL_PROFILES } from "../constants";
-import Themetoggle from "../components/themetoggle";
+import Themetoggle from "../components/ThemeToggle";
 import logo from "../assets/images/logo.png"
 
 const Headermain = () => {
@@ -39,10 +39,10 @@ const Headermain = () => {
                   <Link  onClick={handleToggle} to="/" className="my-3">Home</Link>
                   </li>
                   <li className="menu_item">
-                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
+                  <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
+                    <Link  onClick={handleToggle} to="/projects" className="my-3">Projects</Link>
                   </li>
                   <li className="menu_item">
                   <Link onClick={handleToggle} to="/contact" className="my-3"> Contact</Link>
