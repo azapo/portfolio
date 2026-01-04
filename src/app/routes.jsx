@@ -29,8 +29,11 @@ function AnimatedRoutes() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
-          {Object.keys(PROJECTS).map(key => {
-            return <Route key={key} element={<Project />} path={`/projects/${changeStringSeparator(key, " ", "_")}`} />
+          {Object.entries(PROJECTS).map(entry => {
+
+            const [key, _] = entry;
+
+            return <Route key={key} element={<Project object={entry}/>} path={`/projects/${changeStringSeparator(key, " ", "_")}`} />
           })}
         </Routes>
       </CSSTransition>
