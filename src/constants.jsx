@@ -1,4 +1,6 @@
 import ipeletsResearchPresentation from "./assets/images/proj_quadtree_research/recording.mp4"
+import shoppingListDemo from "./assets/images/proj_shopping_list/demo.mp4"
+import shoppingListScreenshot from "./assets/images/proj_shopping_list/cover.png"
 
 const META = {
     title: "Aram Zaprosyan",
@@ -195,10 +197,10 @@ const PROJECTS = {
                 "To be updated soon"
             ],
             images: [
-
+                shoppingListScreenshot
             ],
             videos: [
-                
+                shoppingListDemo
             ]
         },
     "bookmark":
