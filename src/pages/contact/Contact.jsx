@@ -91,7 +91,7 @@ const Contact = () => {
             </Alert>
           </Col>
           <Col lg="5" className="mb-5">
-            <h3 className="color_sec py-4">Let's connect</h3>
+            <h3 className="color_sec py-4">Let's connect...</h3>
             <address>
               <strong>My Email:</strong>{" "}
               <a href={`mailto:${CONTACT_INFO.email}`}>

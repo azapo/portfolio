@@ -1,3 +1,5 @@
+import ipeletsResearchPresentation from "./assets/images/proj_quadtree_research/recording.mp4"
+
 const META = {
     title: "Aram Zaprosyan",
     description: "Aram Zaprosyan Portfolio",
@@ -130,33 +132,101 @@ const PROJECTS = {
     "portfolio":
         {
             description: "This portfolio!",
+            links: [
+                "https://github.com/azapo/portfolio"
+            ],
+            texts: [
+                "To be updated soon"
+            ],
+            images: [
+
+            ],
+            videos: [
+
+            ]
         },
     "quadtree research":
         {
             description: "Published Quadtree Research",
             links: [
-                "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SoCG.2025.83",
+                "https://computational-geometry.org/cg-week/media-exposition/2025/",
+                "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SoCG.2025.83"
+            ],
+            texts: [
+                "To be updated soon"
+            ],
+            images: [
+
+            ],
+            videos: [
+                ipeletsResearchPresentation
+            ]
+        },
+    "honeypot":
+        {
+            description: "Cybersecurity Honeypot Project",
+            texts: [
+                "To be updated soon"
+            ],
+            images: [
+
+            ],
+            videos: [
+                
             ]
         },
     "compiler":
         {
             description: "Racket Compiler",
+            texts: [
+                "To be updated soon"
+            ],
+            images: [
+
+            ],
+            videos: [
+                
+            ]
+        },
+    "shopping list":
+        {
+            description: "Shopping List Manager",
+            texts: [
+                "To be updated soon"
+            ],
+            images: [
+
+            ],
+            videos: [
+                
+            ]
         },
     "bookmark":
         {
-            description: "Bookmark Chrome Extension",
+            description: "Bookmarks Chrome Extension",
+            texts: [
+                "To be updated soon"
+            ],
+            images: [
+
+            ],
+            videos: [
+                
+            ]
         },
-    
-    // {
-    //     img: "https://picsum.photos/400/600/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
-    // {
-    //     img: "https://picsum.photos/400/300/?grayscale",
-    //     description: "The wisdom of life consists in the elimination of non-essentials.",
-    //     link: "#",
-    // },
+    "short story":
+        {
+            description: "Detective Fiction Short Story",
+            texts: [
+                "To be updated soon"
+            ],
+            images: [
+
+            ],
+            videos: [
+                
+            ]
+        }
 };
 
 const CONTACT_INFO = {
