@@ -1,16 +1,14 @@
-import { useEffect } from "react";
-import { HashRouter as Router, useLocation } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, type ReactNode } from "react";
+import { HashRouter, useLocation } from "react-router-dom";
 import AppRoutes from "./routes";
 import Headermain from "../header";
 import AnimatedCursor from "../hooks/AnimatedCursor";
-import "./App.css";
 
-function ScrollToTop({ children }) {
+function ScrollToTop({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [pathname]);
 
   return children;
@@ -18,7 +16,7 @@ function ScrollToTop({ children }) {
 
 export default function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="cursor__dot">
         <AnimatedCursor
           innerSize={15}
@@ -33,6 +31,6 @@ export default function App() {
         <Headermain />
         <AppRoutes />
       </ScrollToTop>
-    </Router>
+    </HashRouter>
   );
 }

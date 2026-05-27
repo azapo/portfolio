@@ -1,0 +1,210 @@
+import bookmarkCover from "./assets/images/proj_bookmark/cover.png";
+import compilerCover from "./assets/images/proj_compiler/cover.png";
+import honeypotCover from "./assets/images/proj_honeypot/cover.png";
+import portfolioCover from "./assets/images/proj_portfolio/cover.png";
+import quadtreeCover from "./assets/images/proj_quadtree_research/cover.png";
+import quadtreeRecording from "./assets/images/proj_quadtree_research/recording.mp4";
+import shoppingListCover from "./assets/images/proj_shopping_list/cover.png";
+import shoppingListDemo from "./assets/images/proj_shopping_list/demo.mp4";
+import shortStoryCover from "./assets/images/proj_short_story/cover.png";
+
+export type ProjectKey =
+  | "portfolio"
+  | "quadtree research"
+  | "honeypot"
+  | "compiler"
+  | "shopping list"
+  | "bookmark"
+  | "short story";
+
+export type ProjectInfo = {
+  cover: string;
+  description: string;
+  images: string[];
+  links?: string[];
+  texts: string[];
+  videos: string[];
+};
+
+export const META = {
+  title: "Aram Zaprosyan",
+  description: "Aram Zaprosyan Portfolio",
+} as const;
+
+export const INTRO_DATA = {
+  title: "Hi! I'm Aram Zaprosyan",
+  statements: [
+    "I love programming",
+    "I'm a puzzle enthusiast",
+    "I write mysteries",
+    "I play soccer",
+  ],
+  description:
+    "I'm a jack of all trades, master of some. When I'm not programming, you'll probably catch me playing soccer, writing detective fiction stories, or catching rays at the beach. You're welcome to explore my portfolio and get in touch with me!",
+} as const;
+
+export const ABOUT_ME_BLURB = {
+  aboutMe:
+    "I graduate in May of 2026 from the University of Maryland, College Park with a Bachelor of Science (B.S.) in Computer Science, a minor in Cybersecurity through the Advanced Cybersecurity Experience for Students (ACES) Honors Program, and a minor in Data Science (and a 4.0 GPA). I've worked as a software engineer, computer science researcher, and teaching assistant. I'm very passionate about full stack software engineering work and always open to chat!",
+} as const;
+
+export const WORK_HISTORY = [
+  {
+    job: "Software Engineer (Part-Time)",
+    company: "Ncyber",
+    dates: "Aug. 2025 - Present",
+  },
+  {
+    job: "Software Engineering Intern",
+    company: "Ncyber",
+    dates: "June 2025 - Aug. 2025",
+  },
+  {
+    job: "CS Researcher",
+    company: "UMD Department of CS",
+    dates: "Aug. 2024 - Present",
+  },
+  {
+    job: "Software Engineering Intern",
+    company: "Ncyber",
+    dates: "June 2024 - Aug. 2024",
+  },
+  {
+    job: "Software Engineering Intern",
+    company: "U.S. Dept. of VA (VSFS)",
+    dates: "Aug. 2023 - May 2024",
+  },
+  {
+    job: "CS Teaching Assistant",
+    company: "UMD Department of CS",
+    dates: "Aug. 2023 - May 2024",
+  },
+] as const;
+
+export const SKILLS = [
+  "Java/Kotlin",
+  "Python",
+  "JavaScript/React",
+  "Linux/Bash",
+  "x86-64 Assembly",
+  "SQL/PostgreSQL/MySQL/SQLite",
+  "NoSQL/MongoDB",
+  "Racket/OCaml",
+  "C",
+  "HTML/CSS",
+  "MATLAB",
+  "R",
+  "MaterialUI",
+  "Git/GitHub/GitLab",
+  "Visual Studio Code / PyCharm / Eclipse / Vim",
+] as const;
+
+export const RELEVANT_COURSEWORK = [
+  "Advanced Data Structures (CMSC420)",
+  "Honors Algorithms (CMSC351H)",
+  "Database Design (CMSC424)",
+  "Web Application Development with JavaScript (CMSC335)",
+  "Building Secure Web Applications (CMSC388J)",
+  "Computer and Network Security (CMSC414)",
+  "Introduction to Compilers (CMSC430)",
+  "Organization of Programming Languages (CMSC330)",
+  "Programming Handheld Systems (CMSC436)",
+  "Introduction to Data Science (CMSC320)",
+  "Introduction to Computer Systems (CMSC216)",
+  "Object-Oriented Programming I (CMSC131)",
+  "Object-Oriented Programming II (CMSC132)",
+  "Penetration Testing (HACS408T)",
+  "Introduction to Reverse Engineering (HACS408E)",
+  "Foundations in Cybersecurity (HACS100)",
+  "Applied Cybersecurity Foundations I (HACS101)",
+  "Applied Cybersecurity Foundations II (HACS200)",
+  "Digital Forensics (HACS208N)",
+  "Python Programming for Data Science (DATA120)",
+  "Discrete Structures (CMSC250)",
+  "Bioinformatic Algorithms, Databases, and Tools (CMSC423)",
+  "Applications of R for Data Science (DATA110)",
+  "Introduction to Matlab (MATH206)",
+  "Databases for All (INST123)",
+  "Internet of Things Security (HACS408O)",
+  "Cybersecurity Group Problem Solving (HACS498)",
+  "Accounting and Economic Aspects of Cybersecurity (HACS208A)",
+  "Beyond Technology, the Policy Implications of Cyberspace (HACS208P)",
+  "Cybersecurity Professionals Colloquium Series; Current Issues (HACS318A)",
+  "Linear Algebra for Scientists and Engineers (MATH461)",
+  "Applied Probability and Statistics (STAT400)",
+  "Honors Calculus III (MATH241H)",
+] as const;
+
+export const PROJECTS = {
+  portfolio: {
+    cover: portfolioCover,
+    description: "This portfolio!",
+    links: ["https://github.com/azapo/portfolio"],
+    texts: ["To be updated soon"],
+    images: [],
+    videos: [],
+  },
+  "quadtree research": {
+    cover: quadtreeCover,
+    description: "Published Quadtree Research",
+    links: [
+      "https://computational-geometry.org/cg-week/media-exposition/2025/",
+      "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SoCG.2025.83",
+    ],
+    texts: ["To be updated soon"],
+    images: [],
+    videos: [quadtreeRecording],
+  },
+  honeypot: {
+    cover: honeypotCover,
+    description: "Cybersecurity Honeypot Project",
+    texts: ["To be updated soon"],
+    images: [],
+    videos: [],
+  },
+  compiler: {
+    cover: compilerCover,
+    description: "Racket Compiler",
+    texts: ["To be updated soon"],
+    images: [],
+    videos: [],
+  },
+  "shopping list": {
+    cover: shoppingListCover,
+    description: "Shopping List Manager",
+    texts: ["To be updated soon"],
+    images: [shoppingListCover],
+    videos: [shoppingListDemo],
+  },
+  bookmark: {
+    cover: bookmarkCover,
+    description: "Bookmarks Chrome Extension",
+    texts: ["To be updated soon"],
+    images: [],
+    videos: [],
+  },
+  "short story": {
+    cover: shortStoryCover,
+    description: "Detective Fiction Short Story",
+    texts: ["To be updated soon"],
+    images: [],
+    videos: [],
+  },
+} as const satisfies Record<ProjectKey, ProjectInfo>;
+
+export const CONTACT_INFO = {
+  email: "aram.zaprosyan@gmail.com",
+  description: "Feel free to send me a message here or directly to my email yourself!",
+  serviceId: "service_l3768bs",
+  templateId: "template_2czmgdm",
+  publicKey:
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY ??
+    import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY ??
+    "",
+} as const;
+
+export const SOCIAL_PROFILES = {
+  LinkedIn: "https://www.linkedin.com/in/aram-zaprosyan/",
+  GitHub: "https://github.com/azapo",
+  "Google Scholar": "https://scholar.google.com/citations?user=1gAuwGgAAAAJ&hl=en&oi=ao",
+} as const;
